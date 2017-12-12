@@ -1,0 +1,28 @@
+<div class="main">
+  <form (ngSubmit)="loginUser($event)" #personForm="ngForm">
+    <div class="form-container">
+      <mat-form-field>
+        <input matInput placeholder="E-mail" pattern="[^ @]*@[^ @]*" name="email" [(ngModel)]="model.email" #email="ngModel" required>
+        <mat-hint align="end">
+          <span [hidden]="email.pristine">
+              <span [hidden]="!email.errors?.required">E-mail is required</span>
+          </span>
+        </mat-hint>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" name="password" [(ngModel)]="model.password"
+          #password="ngModel" required>
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+        <mat-hint align="end">
+          <span [hidden]="password.pristine">
+            <span [hidden]="!password.errors?.required">Password is required</span>
+          </span>
+        </mat-hint>
+      </mat-form-field>
+      <!--<mat-checkbox class="checkbox" [(ngModel)]="rememberMe" >Stay logged in?</mat-checkbox>-->
+
+      <button mat-raised-button color="primary" [disabled]="!personForm.form.valid">Log-in</button>
+    </div>
+  </form>
+</div>

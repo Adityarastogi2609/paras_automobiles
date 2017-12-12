@@ -1,0 +1,3 @@
+<p-dataTable [value]="GridData" [editable]="true" resizableColumns="true">
+    <p-column *ngFor="let col of columnDefs" [field]="col.field" [header]="col.header" sortable="true" [editable]="true"></p-column>
+</p-dataTable>

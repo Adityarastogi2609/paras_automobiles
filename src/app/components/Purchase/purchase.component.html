@@ -1,1 +1,29 @@
-I am from Purchase
+<button mat-raised-button (click)="add()">
+    <mat-icon>add</mat-icon>
+</button>
+
+<p-datatable [columnDefs]='cols' [GridData]='data'></p-datatable>
+
+<!--<p-dialog header="Item Details" [(visible)]="displayDialog" width="300">
+    <div class="ui-grid">
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-3"><label for="itemname">Item Name</label></div>
+            <div class="ui-grid-col-8"><input pInputText id="itemname" /></div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-3"><label for="itemcode">Item Code</label></div>
+            <div class="ui-grid-col-8"><input pInputText id="itemcode" /></div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-3"><label for="hsmcode">HSM Code</label></div>
+            <div class="ui-grid-col-8"><input pInputText id="hsmcode" /></div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-3"><label for="unitsavailable">Units Available</label></div>
+            <div class="ui-grid-col-8"><input pInputText id="unitsavailable" /></div>
+        </div>
+    </div>
+    <footer>
+        <button type="button" pButton icon="fa-check" (click)="save()" label="Save"></button>
+    </footer>
+</p-dialog>-->

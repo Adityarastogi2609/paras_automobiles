@@ -1,0 +1,36 @@
+  .main{
+  display: flex;
+  flex-direction: column;
+  width: 650px;
+  /*background: #f8f8f8;*/
+  margin: 133px auto;
+  position: relative;
+  padding: 34px;
+  border-radius: 5px;
+  /*box-shadow: 1px 1px 8px #555*/
+}
+ .mat-icon{
+    font-family: 'Material Icons' !important;
+ }
+.form-container{
+  display: flex;
+  flex-direction: column;
+}
+.mat-raised-button{
+  /*border-radius: 25px;*/
+  width: 153px;
+  margin-left: 40%;
+  padding: 7px;
+}
+
+.mat-form-field {
+  padding-bottom: 15px;
+}
+.mat-hint{
+  font-weight: lighter;
+  color:#f4584d;
+}
+
+::ng-deep .custom-class .mat-simple-snackbar {
+  /*background: green;*/
+}
