@@ -1,6 +1,6 @@
 <div class="main">
   <form (ngSubmit)="loginUser($event)" #personForm="ngForm">
-    <div class="form-container">
+    <div class="form-container" >
       <mat-form-field>
         <input matInput placeholder="E-mail" pattern="[^ @]*@[^ @]*" name="email" [(ngModel)]="model.email" #email="ngModel" required>
         <mat-hint align="end">

@@ -1,5 +1,5 @@
 import { TabsComponent } from './components/Tabs/tabs.component';
-import { UserService } from './user.service';
+import { UserService } from './services/user.service';
 import { Injectable } from '@angular/core';
 import { CanActivate, Router, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 

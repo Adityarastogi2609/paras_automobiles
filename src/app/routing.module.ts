@@ -8,7 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full'},
   { path: 'login', component: LoginComponent },
-  { path: 'tabs', canActivate: [AuthguardGuard], component: TabsComponent }
+  { path: 'tabs', component: TabsComponent }
 ];
 
 @NgModule({

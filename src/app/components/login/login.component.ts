@@ -1,5 +1,5 @@
 import { Message } from 'primeng/primeng';
-import { UserService } from './../../user.service';
+import { UserService } from './../../services/user.service';
 import { MatSnackBar,MatSnackBarConfig } from '@angular/material';
 import { Router } from '@angular/router';
 import { Component, OnInit, NgModule } from '@angular/core';

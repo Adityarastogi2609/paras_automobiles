@@ -1,29 +1,44 @@
-<button mat-raised-button (click)="add()">
-    <mat-icon>add</mat-icon>
-</button>
+<button type="button" (click)="addDialog()" pButton icon="fa fa-plus" label="ADD"></button>
 
-<p-datatable [columnDefs]='cols' [GridData]='data'></p-datatable>
+<!--<p-splitButton label="Save" icon="fa-check" (onClick)="save()" [model]="items"></p-splitButton>-->
 
-<!--<p-dialog header="Item Details" [(visible)]="displayDialog" width="300">
-    <div class="ui-grid">
-        <div class="ui-grid-row">
-            <div class="ui-grid-col-3"><label for="itemname">Item Name</label></div>
-            <div class="ui-grid-col-8"><input pInputText id="itemname" /></div>
-        </div>
-        <div class="ui-grid-row">
-            <div class="ui-grid-col-3"><label for="itemcode">Item Code</label></div>
-            <div class="ui-grid-col-8"><input pInputText id="itemcode" /></div>
-        </div>
-        <div class="ui-grid-row">
-            <div class="ui-grid-col-3"><label for="hsmcode">HSM Code</label></div>
-            <div class="ui-grid-col-8"><input pInputText id="hsmcode" /></div>
-        </div>
-        <div class="ui-grid-row">
-            <div class="ui-grid-col-3"><label for="unitsavailable">Units Available</label></div>
-            <div class="ui-grid-col-8"><input pInputText id="unitsavailable" /></div>
-        </div>
-    </div>
-    <footer>
-        <button type="button" pButton icon="fa-check" (click)="save()" label="Save"></button>
-    </footer>
-</p-dialog>-->
+<p-menu #menu popup="popup" [model]="item" appendTo="body"></p-menu>
+<button type="button" pButton icon="fa fa-minus" label="Delete"></button>
+
+<p-datatable [columnDefs]='cols' [GridData]='data' ></p-datatable>
+
+<!--<p-dataTable [value]="data" selectionMode="multiple" [(selection)]="selectedData" [responsive]="true" dataKey="itemcode">
+    <p-column [style]="{'width':'38px'}" selectionMode="multiple"></p-column>
+    <p-column *ngFor="let col of cols" [field]="col.field" [header]="col.header" sortable="true"></p-column>
+</p-dataTable>-->
+
+
+<!--<button type="button" class="pull-right" pButton icon="fa-check" (click)="save()" label="Save"></button>-->
+
+
+<p-dialog header="Add Item-Details" [(visible)]="displayDialog" modal="modal" width="460" [responsive]="true" appendTo="body">
+    <!--<form (ngSubmit)="addItem($event)" #itemForm="ngForm">-->
+        <div class="add-container">
+            <mat-form-field>
+                <input matInput placeholder="Item Name" name="iname">
+            </mat-form-field>
+
+            <mat-form-field hintLabel="Enter numbers only">
+                <input matInput #input type="number" placeholder="Item Code" name="icode" required>
+                <mat-hint align="end">{{input.value?.length || 0}}/**</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="HSM Code" name="hsmcode">
+            </mat-form-field>
+
+            <mat-form-field hintLabel="Enter numbers only">
+                <input matInput placeholder="Units Available" name="uavailable">
+            </mat-form-field>
+
+            <p-footer>
+                <button type="button" pButton icon="fa-check" (click)="addItem($event)" label="Save"></button>
+            </p-footer>
+            </div>
+       <!--</form>-->
+</p-dialog>

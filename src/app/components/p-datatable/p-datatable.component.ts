@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+
+
 @Component({
   selector: 'p-datatable',
   templateUrl: './p-datatable.component.html',
@@ -10,4 +12,5 @@ export class PDatatableComponent {
   @Input() GridData = [];
   @Input() columnDefs:any;
 
+  
 }

@@ -1,0 +1,33 @@
+{
+	"data": [{
+			"itemname": "q",
+			"itemcode": "1",
+			"hsmcode": "s",
+			"unitsavailble": "t"
+		},
+		{
+			"itemname": "q",
+			"itemcode": "2",
+			"hsmcode": "s",
+			"unitsavailble": "t"
+		},
+		{
+			"itemname": "q",
+			"itemcode": "3",
+			"hsmcode": "s",
+			"unitsavailble": "t"
+		},
+		{
+			"itemname": "q",
+			"itemcode": "4",
+			"hsmcode": "s",
+			"unitsavailble": "t"
+		},
+		{
+			"itemname": "q",
+			"itemcode": "5",
+			"hsmcode": "s",
+			"unitsavailble": "t"
+		}
+	]
+}
